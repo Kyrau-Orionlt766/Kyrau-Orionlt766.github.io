@@ -1,54 +1,51 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+
+ 
+<头>
     <meta charset="UTF-8">
-    <title>电影详情</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">首页</a>
-            <div class="nav-links">
-                <a href="index.html">返回首页</a>
-            </div>
+    <标题>电影详情</标题>
+    <链接 关系="样式表" 链接="css/style.css">
+</头部>
+<身体>
+    <导航 类="导航栏">
+        <div 类="容器">
+            <一个 超链接地址"index.html" 类"标志">首页</超链接>
         </div>
-    </nav>
+    </导航>
 
-    <div class="movie-detail-container" id="movieDetail"></div>
+    <div class=="电影详情容器" id"电影详情"></div>
 
-    <script>
+    <脚本>
         // 重新定义 mockMovies（与首页数据一致）
-        const mockMovies = [
-            {
-                id: 1,
-                title: "盗梦空间",
-                genres: ["悬疑", "科幻"],
-                poster_url: "images/inception.png",
-                reason: "根据您近期喜爱的科幻电影推荐",
-                description: "一名盗贼通过潜入他人梦境窃取信息，却陷入层层嵌套的梦境危机。",
-                director: "克里斯托弗·诺兰",
-                year: 2010
+        常量 模拟电影 = [
+            输入：
+                id：1，
+                标题：“盗梦空间”
+                类型：["悬疑", "科幻"]
+                海报链接："images/inception.png"
+                原因：“根据您近期喜爱的科幻电影推荐”，
+                描述：“一名盗贼通过潜入他人梦境窃取信息，却陷入层层嵌套的梦境危机。”
+
+                年份：2010
+            }，
+            输入：
+                id：2，
+                标题：“阿凡达”
+                类型：["动作", "冒险"]，
+                海报链接："images/avatar.png"
+                原因： "热门高评分电影"
+                描述：“人类为获取资源入侵潘多拉星球，与纳美族人展开生存之战。”
+                导演：“詹姆斯·卡梅隆”
+                年份：2009
             },
-            {
-                id: 2,
-                title: "阿凡达",
-                genres: ["动作", "冒险"],
-                poster_url: "images/avatar.png",
-                reason: "热门高评分电影",
-                description: "人类为获取资源入侵潘多拉星球，与纳美族人展开生存之战。",
-                director: "詹姆斯·卡梅隆",
-                year: 2009
-            },
-            {
+            输入：            {
                 id: 3,
-                title: "泰坦尼克号",
-                genres: ["爱情", "灾难"],
-                poster_url: "images/titanic.png",
-                reason: "经典爱情电影",
-                description: "穷画家杰克与贵族少女露丝在沉船事故中的生死之恋。",
-                director: "詹姆斯·卡梅隆",
-                year: 1997
+                标题: "泰坦尼克号"
+                类型: ["爱情", "灾难"],
+                poster_url: "images/泰坦尼克号.png",
+                原因：“经典爱情电影”，
+                描述: "穷画家杰克与贵族少女露丝在沉船事故中的生死之恋。"
+                导演: "詹姆斯·卡梅隆"
+                年份：1997
             }
         ];
 
@@ -65,20 +62,20 @@
             const savedRating = localStorage.getItem(`movie_${movieId}_rating`);
             detailContainer.innerHTML = `
         <div class="detail-poster">
-            <img src="${movie.poster_url}" alt="${movie.title}">
+            <img src="${电影海报网址}" alt="${电影标题}">
         </div>
-        <div class="detail-info">
+        <div class="详细信息">
             <h1>${movie.title}</h1>
-            <p><strong>导演:</strong> ${movie.director}</p>
-            <p><strong>年份:</strong> ${movie.year}</p>
-            <p><strong>类型:</strong> ${movie.genres.join(', ')}</p>
-            <p><strong>简介:</strong> ${movie.description}</p>
-            <!-- 显示评分 -->
-            ${savedRating ? `<p>您的评分: ${'★'.repeat(savedRating)}</p>` : ''}
-            <a href="index.html" class="back-btn">返回推荐列表</a>
+            <段><强>导演:</强> ${movie.director}</段>
+            <段><强>年份:</强> ${movie.year}</段>
+            <段><强>类型:</强> ${movie.genres.join(', ')}</段>
+            <段><强>简介:</强> ${movie.description}</段>
+            
+<段></段>
+            <一个 链接="index.html" 类="返回按钮">返回推荐列表</链接>
         </div>
-    `;
+
         }
-    </script>
-</body>
+    </脚本>
+</身体>
 </html>
