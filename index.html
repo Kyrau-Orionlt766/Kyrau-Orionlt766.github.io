@@ -1,25 +1,25 @@
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <title>电影推荐系统</title>
-    <link rel="stylesheet" href="css/style.css">
+<！ -  index.html->
+<！doctype html>
+< html  lang = “ zh-cn” >
+<头>
+    < meta  charset = “ utf-8” >
+    <title>电影推荐系统< / title >
+    < link  rel = “ stylesheet”  href = “ css/style.css” >
     <script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">首页</a>
-            <div class="nav-links">
-                <button onclick="resetRatings()">重置所有评分</button>
-                <span id="username">未登录用户</span>
-                <button onclick="openLoginModal()" id="loginBtn">登录</button>
-                <button onclick="logout()" id="logoutBtn" style="display: none;">退出</button>
-            </div>
-        </div>
-    </nav>
+            <a href =“ index.html” class =“徽标”>首页< / a >​ ​​​​​​ 
+            < div  class = “ nav-links” >
+                < button  onclick = “ resetratings （）” >重置所有评分</ button >
+                < span  ID = “用户名” >未登录用户</ span >
+                < button  onclick = “ openloginmodal （）”  id = “ loginbtn” >登录</ button >
+                < button  onclick = “ lokout （）” ​​​ ​​​​​​​ >退出</ button >
+            </ div >
+        </ div >
+    </ nav >
 
     <div class="recommend-container">
         <h2>为您推荐的电影</h2>
@@ -30,12 +30,12 @@
     <!-- 在 body 末尾添加登录模态框 -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeLoginModal()">&times;</span>
-            <h2>用户登录</h2>
+            < span  class = “ close”  onclick = “ cloceLoginModal （）” > ＆times; </ span >
+            <H2>用户登录< / h2 >
 
-            <!-- 虚拟输入框 -->
-            <div style="display:none;">
-                <input type="text" name="fakeUsername" autocomplete="off">
+            <！ - 虚拟输入框->
+            < div  style = “显示：无;” >
+                < input  type = “ text”  name = “ fakeusername”  autocomplete = “ off” >
                 <input type="password" name="fakePassword" autocomplete="new-password">
             </div>
 
